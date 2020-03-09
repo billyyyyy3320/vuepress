@@ -48,6 +48,7 @@ module.exports = ctx => ({
           '/api/': getApiSidebar(),
           '/guide/': getGuideSidebar('Guide', 'Advanced'),
           '/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
+          '/theme/using-a-theme': getGuideSidebar('Guide', 'Advanced'),
           '/theme/': getThemeSidebar('Theme', 'Introduction')
         }
       },
@@ -108,25 +109,25 @@ function getGuideSidebar (groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-        '',
-        'getting-started',
-        'directory-structure',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'i18n',
-        'deploy'
+        '/',
+        '/guide/getting-started',
+        '/guide/directory-structure',
+        '/guide/basic-config',
+        '/guide/assets',
+        '/guide/markdown',
+        '/theme/using-a-theme',
+        '/guide/i18n',
+        '/guide/deploy'
       ]
     },
     {
       title: groupB,
       collapsable: false,
       children: [
-        'frontmatter',
-        'permalinks',
-        'markdown-slot',
-        'global-computed'
+        '/guide/frontmatter',
+        '/guide/permalinks',
+        '/guide/markdown-slot',
+        '/guide/global-computed'
       ]
     }
   ]
